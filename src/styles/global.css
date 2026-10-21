@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+:root {
+  /* Base Neutra */
+  --background: oklch(0.18 0 0);
+  --foreground: oklch(0.98 0 0);
+
+  /* Tarjetas y Modales */
+  --card: oklch(0.23 0 0);
+  --card-foreground: oklch(0.98 0 0);
+
+  --popover: oklch(0.23 0 0);
+  --popover-foreground: oklch(0.98 0 0);
+
+  /* Color Primario (#73A7DD) */
+  --primary: oklch(0.70 0.09 237);
+  --primary-foreground: oklch(0.18 0 0);
+
+  /* Elementos Secundarios y Muted */
+  --secondary: oklch(0.28 0 0);
+  --secondary-foreground: oklch(0.98 0 0);
+
+  --muted: oklch(0.28 0 0);
+  --muted-foreground: oklch(0.70 0 0);
+
+  /* Bordes, Inputs y Focus */
+  --border: oklch(0.32 0 0);
+  --input: oklch(0.32 0 0);
+  --ring: oklch(0.70 0.09 237);
+
+  --radius: 0.5rem;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
